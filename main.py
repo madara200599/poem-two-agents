@@ -22,6 +22,7 @@ POEM = (
 
 
 def main() -> None:
+    assert 1 <= len(POEM) <= 280, "poem must be 1-280 characters"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8", newline="\n") as f:
         f.write(POEM)
